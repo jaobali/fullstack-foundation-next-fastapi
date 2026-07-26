@@ -1,2 +1,5 @@
-# Hub de Automações de Faturamento
-Este projeto será usado pelo autor para desenvolver habilidades em engenharia de sofware e para criar um hub de consolidação das automações do projeto P-775
+# Base Fullstack Template
+
+Este repositório é um template base fullstack para projetos futuros.
+
+Ele inclui uma estrutura inicial com backend em Python, frontend em JavaScript e configuração de infraestrutura para facilitar novos desenvolvimentos.
