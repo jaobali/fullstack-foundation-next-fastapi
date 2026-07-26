@@ -1,5 +1,5 @@
 import psycopg
-from core.settings import settings
+from database.core.settings import settings
 
 def get_connection():
     return psycopg.connect(
