@@ -3,4 +3,8 @@ from database.status import router as status_router
 
 app = FastAPI()
 
-app.include_router(status_router)
+# app.include_router(status_router)
+
+@app.get("/")
+def root():
+    return {"status": "ok"}
