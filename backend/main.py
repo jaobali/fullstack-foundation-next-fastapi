@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from database.status import router as status_router
+# from database.status import router as status_router
 
 app = FastAPI()
 
