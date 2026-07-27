@@ -18,7 +18,8 @@ help:
 	@echo "  make frontend-test-watch"
 	@echo ""
 	@echo "Backend"
-	@echo "  backend-dev"
+	@echo "  make backend-dev"
+	@echo "  make backend-test"
 	@echo ""
 	@echo "Infra"
 	@echo "  make infra-up"
@@ -43,7 +44,10 @@ frontend-test-watch:
 ############## Backend
 
 backend-dev:
-	cd backend && uv run uvicorn main:app --reload
+	cd backend && uv run --env-file ../.env uvicorn main:app --reload --host 0.0.0.0
+
+backend-test:
+	cd backend && uv run pytest
 
 ############## Infra
 
