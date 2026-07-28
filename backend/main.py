@@ -8,3 +8,9 @@ app = FastAPI()
 @app.get("/")
 def root():
     return {"status": "ok"}
+
+@app.get("/hello")
+def hello():
+    return {
+        "message": "Olá do FastAPI"
+    }
