@@ -8,4 +8,8 @@ A seguir detalhamos partes individuais do sistema. Posteriormente seguem comenta
 
 ## Frontend
 
-Desenvolvido com Node.js com o framework Next. A versão do Next é definida no arquivo `.nvmrc`
+Desenvolvido com Node.js com o framework Next. A versão do Next é definida no arquivo `.nvmrc`. Para instalar a versão especificada use:
+
+```bash
+cd frontend && nvm install
+```
