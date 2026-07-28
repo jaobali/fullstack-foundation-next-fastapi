@@ -1,11 +1,11 @@
-export default async function DBStatusPage() {
-  const response = await fetch("http://localhost:8000/database_status")
+// export default async function DBStatusPage() {
+//   const response = await fetch("/api/database_status")
 
-  if (!response.ok) {
-    throw new Error("Erro ao consultar status do banco")
-  }
+//   if (!response.ok) {
+//     throw new Error("Erro ao consultar status do banco")
+//   }
 
-  const data = await response.json()
+//   const data = await response.json()
 
-  return <h1>Status do Banco de Dados: {data.status}</h1>
-}
+//   return <h1>Status do Banco de Dados: {data.status}</h1>
+// }
