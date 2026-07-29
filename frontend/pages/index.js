@@ -1,9 +1,3 @@
-// function Home(){
-//     return <h1>João é brabo de mais</h1>
-// }
-
-// export default Home;
-
 import { useState } from "react";
 
 export default function Home() {
@@ -16,13 +10,24 @@ export default function Home() {
     setMessage(data.message);
   }
 
+  async function testarBackendretornoDB() {
+    const response = await fetch("/api/database_status");
+    const data = await response.json();
+
+    setMessage(JSON.stringify(data, null, 2));
+  }
+
   return (
     <div>
       <button onClick={testarBackend}>
         Testar Backend
       </button>
 
-      <p>{message}</p>
+      <button onClick={testarBackendretornoDB}>
+        Testar Backend com Retorno do Banco
+      </button>
+
+      <pre>{message}</pre>
     </div>
   );
 }
