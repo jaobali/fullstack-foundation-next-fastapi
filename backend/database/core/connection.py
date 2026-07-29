@@ -8,4 +8,8 @@ def get_connection():
         dbname=settings.POSTGRES_DB,
         user=settings.POSTGRES_USER,
         password=settings.POSTGRES_PASSWORD,
+        sslmode=settings.PGSSLMODE,
+        channel_binding=settings.PGCHANNELBINDING
     )
+
+

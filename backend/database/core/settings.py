@@ -6,5 +6,7 @@ class Settings(BaseSettings):
     POSTGRES_DB: str
     POSTGRES_USER: str
     POSTGRES_PASSWORD: str
+    PGSSLMODE: str | None = None
+    PGCHANNELBINDING: str | None = None
 
 settings = Settings()

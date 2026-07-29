@@ -44,7 +44,7 @@ frontend-test-watch:
 ############## Backend
 
 backend-dev:
-	cd backend && uv run --env-file ../.env uvicorn main:app --reload --host 0.0.0.0
+	cd backend && uv run --env-file .env.local uvicorn main:app --reload --host 0.0.0.0
 
 backend-test:
 	cd backend && uv run pytest
