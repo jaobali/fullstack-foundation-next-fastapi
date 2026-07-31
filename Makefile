@@ -2,12 +2,17 @@
 	frontend-dev \
 	frontend-test \
 	frontend-test-watch \
+	backend-dev \
+	backend-test \
+	migration-create \
+	migration-up \
+	migration-current \
+	migration-history \
 	infra-up \
 	infra-down \
 	infra-logs \
 	infra-stop \
-	dev \
-	backend-dev
+	dev
 
 help:
 	@echo "Comandos disponíveis:"
@@ -20,6 +25,12 @@ help:
 	@echo "Backend"
 	@echo "  make backend-dev"
 	@echo "  make backend-test"
+	@echo ""
+	@echo "Migrations"
+	@echo "  make migration-create message=\"nome da migration\""
+	@echo "  make migration-up"
+	@echo "  make migration-current"
+	@echo "  make migration-history"
 	@echo ""
 	@echo "Infra"
 	@echo "  make infra-up"
@@ -49,6 +60,20 @@ backend-dev:
 backend-test:
 	cd backend && uv run pytest
 
+############## Migrations
+
+migration-create:
+	cd backend && uv run --env-file .env.local alembic revision -m "$(message)"
+
+migration-up:
+	cd backend && uv run --env-file .env.local alembic upgrade head
+
+migration-current:
+	cd backend && uv run --env-file .env.local alembic current
+
+migration-history:
+	cd backend && uv run --env-file .env.local alembic history
+
 ############## Infra
 
 infra-up:
@@ -62,6 +87,8 @@ infra-down:
 
 infra-logs:
 	docker compose -f infra/compose.yaml logs -f
+
+############## Projeto
 
 dev:
 	$(MAKE) infra-up
