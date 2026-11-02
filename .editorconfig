@@ -1,7 +1,0 @@
-# Não consegui usar essa merda
-
-root = true
-
-[.js]
-indent_style = space
-indent_size = 2
