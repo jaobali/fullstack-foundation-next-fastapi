@@ -8,7 +8,7 @@ A seguir detalhamos partes individuais do sistema. Posteriormente seguem comenta
 
 ## Frontend
 
-Desenvolvido com Node.js com o framework Next. A versão do Next é definida no arquivo `.nvmrc`. Para instalar a versão especificada use:
+Desenvolvido com Node.js com o framework Next. A versão do Node é definida no arquivo `.nvmrc`. Para instalar a versão especificada use:
 
 ```bash
 cd frontend && nvm install
@@ -19,6 +19,8 @@ Os pacotes utilizados (dependências) neste projeto estão listados no arquivo `
 ```bash
 cd frontend && npm install
 ```
+
+Umas das dependências é o Next, o framework escolhido para o desenvolvimento do frontend. O backend será em python/Fast API.
 
 ## Backend
 
