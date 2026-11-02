@@ -1,8 +1,0 @@
-from core.settings import settings
-from connection import get_connection
-
-with get_connection() as conn:
-    with conn.cursor() as cur:
-        cur.execute("SELECT 1 + 1 as sum;")
-        result = cur.fetchone()
-        print(result)
