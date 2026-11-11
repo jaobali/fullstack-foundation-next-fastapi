@@ -63,8 +63,8 @@ backend-test:
 ############## Migrations
 
 migration-create:
-	cd backend && uv run --env-file .env alembic revision -m "$(message)"
-
+	cd backend && uv run --env-file .env alembic revision --autogenerate -m "$(message)"
+	
 migration-up:
 	cd backend && uv run --env-file .env alembic upgrade head
 
