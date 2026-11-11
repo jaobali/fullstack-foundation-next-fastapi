@@ -55,7 +55,7 @@ frontend-test-watch:
 ############## Backend
 
 backend-dev:
-	cd backend && uv run --env-file .env.local uvicorn main:app --reload --host 0.0.0.0
+	cd backend && uv run --env-file .env uvicorn main:app --reload --host 0.0.0.0
 
 backend-test:
 	cd backend && uv run pytest
@@ -63,16 +63,16 @@ backend-test:
 ############## Migrations
 
 migration-create:
-	cd backend && uv run --env-file .env.local alembic revision -m "$(message)"
+	cd backend && uv run --env-file .env alembic revision -m "$(message)"
 
 migration-up:
-	cd backend && uv run --env-file .env.local alembic upgrade head
+	cd backend && uv run --env-file .env alembic upgrade head
 
 migration-current:
-	cd backend && uv run --env-file .env.local alembic current
+	cd backend && uv run --env-file .env alembic current
 
 migration-history:
-	cd backend && uv run --env-file .env.local alembic history
+	cd backend && uv run --env-file .env alembic history
 
 ############## Infra
 

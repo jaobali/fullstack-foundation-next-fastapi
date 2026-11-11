@@ -9,10 +9,9 @@ backend/.venv
 backend/.pytest_cache
 
 # Variáveis de ambiente
-.env
-.env.*
-!.env.example
-!**/.env.example
+#.env.*
+#!.env.example
+#!**/.env.example
 
 # Sistema operacional
 .DS_Store
