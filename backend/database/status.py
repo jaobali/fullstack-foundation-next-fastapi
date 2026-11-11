@@ -1,6 +1,6 @@
-from datetime import datetime, timezone
-
 from fastapi import APIRouter
+
+from datetime import datetime, timezone
 from database.core.connection import get_connection
 
 router = APIRouter()
