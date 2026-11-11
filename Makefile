@@ -62,9 +62,10 @@ backend-test:
 
 ############## Migrations
 
+# Use migration-create message="nome da migration" para criar uma nova migration.
 migration-create:
 	cd backend && uv run --env-file .env alembic revision --autogenerate -m "$(message)"
-	
+
 migration-up:
 	cd backend && uv run --env-file .env alembic upgrade head
 
