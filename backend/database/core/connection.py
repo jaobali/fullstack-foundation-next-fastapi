@@ -13,3 +13,10 @@ def get_connection():
     )
 
 
+def execute_query(query: str, params: tuple | None = None) -> list[tuple]:
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(query, params)
+            return cur.fetchall() if cur.description is not None else []
+
+
